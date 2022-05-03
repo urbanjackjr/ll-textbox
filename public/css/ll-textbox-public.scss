@@ -1,0 +1,72 @@
+.textbox {
+    padding: 20px;
+    background: #f5f5f5;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+    .error {
+        color: red;
+    }
+
+    .textbox-inner {
+
+        >span {
+            position: relative;
+            color: black;
+
+            &:hover {
+                background: #0071dc77;
+            }
+        }
+    }
+
+    .tooltip {
+        position: absolute;
+        width: auto;
+        top: calc(-100% - 44px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        line-height: 1;
+        text-align: center;
+        z-index: 999;
+        display: block;
+        white-space: nowrap;
+
+        &::after {
+            content: "\f0d7";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 1;
+            color: #0071dc;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 998;
+            width: 100%;
+            text-align: center;
+        }
+
+        .word {
+            padding: 10px;
+            display: block;
+        }
+
+        .save-word {
+            display: block;
+            background: #0071dc;
+            padding: 5px;
+            font-size: 12px;
+            color: white;
+            cursor: pointer;
+            line-height: 16px;
+        }
+    }
+}
+
+.tutor-dashboard-permalinks li.tutor-dashboard-menu-saved_words a::before {
+    content: "\f112";
+}
